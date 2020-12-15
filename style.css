@@ -4,7 +4,6 @@
 
 
 #app {
-  flex-direction: grid;
   font-size: 5em;
   text-align: center;
   height: 100vh;
@@ -18,18 +17,6 @@
   ;
 }
 
-@media (max-width: 700px) {
-  #app {
-    flex-direction: column;
-    color: red;
-  }
-}
-
-@media (max-width: 1100px) and (min-width: 700px) {
-  #app {
-    flex-direction: column;
-  }
-}
 
 #header {
   background-color: #f3ca40;
@@ -55,3 +42,30 @@
   grid-area: ftr;
   background-color: #f08a4b;
 }
+
+/* phone view */
+@media(max-width: 699px) {
+  #app{
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 10% 40% 15% 15%;
+  grid-template-areas:
+  "hdr"
+  "nav"
+  "art"
+  "ads"
+  "ftr"
+  }
+}
+/* tablet view */
+@media(min-width: 700px) and (max-width: 1099px) {
+  #app{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 10% 50% 20%;
+    grid-template-areas:
+    "hdr hdr"
+    "nav nav"
+    "art ads"
+    "ftr ftr"
+    }
+}
+
