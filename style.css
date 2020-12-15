@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
+
 #app {
+  flex-direction: grid;
   font-size: 5em;
   text-align: center;
   height: 100vh;
@@ -14,6 +16,19 @@
     "nav art ads"
     "ftr ftr ftr"
   ;
+}
+
+@media (max-width: 700px) {
+  #app {
+    flex-direction: column;
+    color: red;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 700px) {
+  #app {
+    flex-direction: column;
+  }
 }
 
 #header {
